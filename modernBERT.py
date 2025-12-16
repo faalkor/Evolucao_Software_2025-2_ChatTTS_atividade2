@@ -26,6 +26,16 @@ classifier = pipeline(
 # Não conseguiu identificar defeito sutil
 good_code = "def add(a, b): return a + b"
 bad_code = "def add(a, b): return a - b"
+detectable_bad_code = """
+def foo(a,b):
+    x=0
+    for i in range(1000):
+        for j in range(1000):
+            if i % 2 == 0:
+                if j % 2 == 0:
+                    x += i*j
+    return x
+"""
 
 
 print(classifier(good_code))
