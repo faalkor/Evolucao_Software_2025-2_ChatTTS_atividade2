@@ -1,0 +1,19 @@
+Localization:
+- Long Method: The `download_models` method contains a long series of conditional checks and actions that could be refactored into smaller, more focused methods.
+
+Evidence:
+- The method performs several tasks: checking if models are already downloaded, downloading models if necessary, and verifying the integrity of the downloaded models.
+
+Justification Técnica:
+- The method is doing too much in one place, which makes it hard to understand and maintain. It also violates the Single Responsibility Principle, as it's responsible for both downloading and verifying the integrity of the models.
+
+Sugestão de Refatoração:
+- Refactor the method into smaller methods, each with a single responsibility. For example, create separate methods for checking if models are downloaded, downloading models, and verifying the integrity of the downloaded models.
+
+Magic Numbers:
+- There are no magic numbers in the provided code snippet.
+
+Cognitive Complexity:
+- The `download_models` method has a high cognitive complexity due to its multiple conditional branches and the various tasks it performs.
+
+Justification Técnica:

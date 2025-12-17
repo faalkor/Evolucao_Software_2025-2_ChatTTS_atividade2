@@ -1,0 +1,14 @@
+Localization:
+- Long Method: The `download_models` method contains a long method that handles different sources for downloading models.
+- Magic Numbers: The `source` parameter has a default value of "local", which is a magic number indicating the default source for downloading models.
+- Cognitive Complexity: The `download_models` method has a high cognitive complexity due to its multiple conditional branches and error handling.
+
+Evidence:
+- Long Method: The `download_models` method contains multiple conditional branches and error handling, making it a long method.
+- Magic Numbers: The default value of the `source` parameter is "local", which is a magic number.
+- Cognitive Complexity: The `download_models` method has a high cognitive complexity due to its multiple conditional branches and error handling.
+
+Justification Técnica:
+- Long Method: The `download_models` method contains multiple conditional branches and error handling, making it a long method.
+- Magic Numbers: The default value of the `source` parameter is "local", which is a magic number.
+- Cognitive Complexity: The `download_models

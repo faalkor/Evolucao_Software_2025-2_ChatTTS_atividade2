@@ -1,0 +1,15 @@
+Localization:
+- Long Method: The `download_models` method contains a long series of conditional checks and actions that could be refactored into smaller, more focused methods.
+
+Evidence:
+- The method contains a series of if-else statements that handle different sources for downloading models and checking for updates.
+
+Justification Técnica:
+- The method is doing multiple things: checking if models are already downloaded, downloading models if necessary, and verifying the integrity of the downloaded models.
+- The method is handling different sources for downloading models, which adds complexity and makes it harder to understand and maintain.
+
+Sugestão de Refatoração:
+- Extract the logic for checking if models are already downloaded into a separate method, e.g., `check_models_downloaded`.
+- Extract the logic for downloading models into a separate method, e.g., `download_models_from_source`.
+- Extract the logic for verifying the integrity of downloaded models into a separate method, e.g., `verify_models_integrity`.
+- Use these extracted methods to simplify the `download_models` method and make it more readable and
