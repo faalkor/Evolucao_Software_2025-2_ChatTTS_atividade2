@@ -50,28 +50,23 @@ Os modelos são executados em **notebooks do Google Colab**, evitando dependênc
     ├── PRs_comments
     │   └── extract_pr_comments.py
     ├── models
-    │   ├── BERTweet
-    │   │   └── analise_bertweet.py
-    │   ├── Multilingual
-    │   │   └── analyzeMultilingual.py
-    │   ├── Roberta
-    │   │   └── analyzeRobertaBase.py
     │   ├── Mistral.ipynb
-    │   ├── Qwen.ipynb
-    │   └── Phi_3.ipynb
+    │   ├── Phi_3.ipynb
+    │   └── Qwen.ipynb
     └── results
-        ├── bertweet_sentiment_results.json
-        ├── multilingual_sentiment_results.json
-        └── roberta_sentiment_results.json
+        ├── Mistral
+        │   ├── resultado_core-0.1.1.txt
+        │   ├── resultado_core-0.2.2.txt
+        │   └── resultado_core-0.2.4.txt
+        ├── Phi_3
+        │   ├── resultado_core-0.1.1.txt
+        │   ├── resultado_core-0.2.2.txt
+        │   └── resultado_core-0.2.4.txt
+        └── Qwen
+            ├── resultado_core-0.1.1.txt
+            ├── resultado_core-0.2.2.txt
+            └── resultado_core-0.2.4.txt
 ```
-
-O arquivo:
-
-```
-src/PRs_comments/pr_comments_2noise_ChatTTS_closed_nobots_True.json
-```
-
-já contém os comentários de PRs que são analisados pelos modelos.
 
 ---
 
@@ -177,37 +172,6 @@ Cada arquivo de resultados contém uma lista de objetos no formato:
 * **text**: texto analisado
 * **label**: sentimento atribuído
 * **score**: confiança do modelo
-
----
-
-## 5. (Opcional) Coleta de Comentários de Outros Repositórios
-
-O script abaixo permite reaplicar a análise em qualquer repositório GitHub:
-
-```text
-src/PRs_comments/extract_pr_comments.py
-```
-
-### Requisitos adicionais
-
-* **Token de Acesso Pessoal do GitHub (PAT)** com permissão de leitura.
-
-Configure no arquivo:
-
-```python
-GITHUB_TOKEN = "seu_token"
-REPO_OWNER = "owner"
-REPO_NAME = "repositorio"
-```
-
-Depois disso, execute:
-
-```bash
-cd src/PRs_comments
-python extract_pr_comments.py
-```
-
-O novo arquivo `.json` poderá ser reutilizado pelos modelos ajustando o caminho de entrada.
 
 ---
 
