@@ -1,0 +1,28 @@
+### Análise do Código
+
+O código apresentado é uma classe `Chat` que parece ser responsável pela interação com um sistema de conversa. Vamos analisar o código em busca de Code Smells, focando em Long Method, Magic Numbers e Cognitive Complexity.
+
+#### 1. Long Method
+
+**Localização:** `Chat.download_models`
+
+**Evidência:**
+```python
+def download_models(
+    self,
+    source: Literal["huggingface", "local", "custom"] = "local",
+    force_redownload=False,
+    custom_path: Optional[torch.serialization.FILE_LIKE] = None,
+) -> Optional[str]:
+```
+O método `download_models` tem uma assinatura longa e contém várias verificações e operações complexas.
+
+**Justificativa Técnica:**
+- O método realiza várias tarefas relacionadas ao download e verificação dos modelos, o que torna-o extenso e difícil de entender.
+- A presença de múltiplos parâmetros (`source`, `force_redownload`, `custom_path`) adiciona à complexidade do método.
+
+**Sugestão de Refatoração:**
+Divida o método em métodos menores, cada um responsável por uma única função. Por exemplo:
+- Um método para verificar se os arquivos necessários já estão presentes.
+- Outro método para baixar os arquivos.
+- Terceiro método para verificar a

@@ -1,0 +1,35 @@
+### Análise do Código
+
+O código apresentado é uma classe `Chat` que parece ser responsável pela gestão de modelos de linguagem e outras funcionalidades relacionadas. Vamos analisar o código em busca de Code Smells, com foco em Long Method, Magic Numbers e Cognitive Complexity.
+
+#### 1. Long Method
+
+**Localização:** `download_models`
+
+**Evidência:**
+```python
+def download_models(
+    self,
+    source: Literal["huggingface", "local", "custom"] = "local",
+    force_redownload=False,
+    custom_path: Optional[torch.serialization.FILE_LIKE] = None,
+) -> Optional[str]:
+    if source == "local":
+        download_path = os.getcwd()
+        if (
+            not check_all_assets(Path(download_path), self.sha256_map, update=True)
+            or force_redownload
+        ):
+            with tempfile.TemporaryDirectory() as tmp:
+                download_all_assets(tmpdir=tmp)
+            if not check_all_assets(
+                Path(download_path), self.sha256_map, update=False
+            ):
+                self.logger.error(...)
+```
+
+**Justificativa Técnica:**
+O método `download_models` é bastante longo e complexo, contendo várias verificações e operações. Isso dificulta a leitura e manutenção do código.
+
+**Sugestão de Refatoração:**
+Divida o método em métodos menores,
