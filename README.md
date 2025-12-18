@@ -1,7 +1,7 @@
-# Análise de Sentimentos em Evolução de Software
+# Detecção de Code Smells
 
-Este repositório apresenta uma **pipeline de análise de sentimentos aplicada à Evolução de Software**, utilizando comentários de *Pull Requests* do projeto **ChatTTS** como base de dados.
-A atividade compara diferentes **modelos de linguagem** executados **diretamente no Google Colab**, garantindo reprodutibilidade, facilidade de uso e padronização do ambiente.
+Este repositório apresenta uma **pipeline de análise de sentimentos aplicada à Evolução de Software**, utilizando código do projeto **ChatTTS** como base de dados.
+A atividade compara diferentes **modelos de linguagem**, responsáveis pela identificação de defeitos no código, executados **diretamente no Google Colab**, garantindo reprodutibilidade, facilidade de uso e padronização do ambiente.
 
 ---
 
@@ -16,7 +16,6 @@ O tutorial oficial da atividade, com instruções passo a passo e critérios de 
 ## 📰 Projeto
 - [**ChatTTS**](https://github.com/2noise/ChatTTS)
 
-Os comentários de *Pull Requests* deste repositório são utilizados como entrada para os modelos de análise de sentimentos.
 
 ---
 
@@ -47,12 +46,14 @@ Os modelos são executados em **notebooks do Google Colab**, evitando dependênc
 ├── requirements.txt
 └── src
     ├── main.py
-    ├── PRs_comments
-    │   └── extract_pr_comments.py
     ├── models
     │   ├── Mistral.ipynb
     │   ├── Phi_3.ipynb
     │   └── Qwen.ipynb
+    ├── releases
+    │   ├── core-0.1.1.py
+    │   ├── core-0.2.2.py
+    │   └── core-0.2.4.py
     └── results
         ├── Mistral
         │   ├── resultado_core-0.1.1.txt
@@ -70,9 +71,7 @@ Os modelos são executados em **notebooks do Google Colab**, evitando dependênc
 
 ---
 
-## ⚙️ Pré‑requisitos (Execução Local)
-
-Caso deseje executar a versão local (modelos clássicos):
+## ⚙️ Pré‑requisitos
 
 * **Python 3.9+**
 * **pip**
@@ -90,7 +89,7 @@ pip install -r requirements.txt
 
 1. Clonar o repositório.
 2. Instalar as dependências.
-3. GExecução via Google Colab.
+3. Execução via Google Colab.
 
 ---
 
@@ -117,7 +116,7 @@ Para os modelos **Mistral**, **Qwen** e **Phi‑3**, utilize diretamente os note
 
 1. Clique no badge **Open in Colab** do modelo desejado.
 2. Execute as células sequencialmente.
-3. Os resultados serão exibidos no próprio notebook ou exportados em formato `.json`.
+3. Os resultados serão exibidos no próprio notebook ou exportados em formato `.txt`.
 
 Essa abordagem evita configurações locais e permite uso de GPU.
 
@@ -125,23 +124,7 @@ Essa abordagem evita configurações locais e permite uso de GPU.
 
 ## 3. Formato dos Arquivos de Saída
 
-Cada arquivo de resultados contém uma lista de objetos no formato:
-
-```json
-{
-  "pr_number": 123,
-  "user": "login_do_usuario",
-  "text": "conteúdo do comentário",
-  "label": "POSITIVE | NEUTRAL | NEGATIVE",
-  "score": 0.987
-}
-```
-
-* **pr_number**: número do Pull Request
-* **user**: autor do comentário
-* **text**: texto analisado
-* **label**: sentimento atribuído
-* **score**: confiança do modelo
+Cada arquivo de resultados está em formato `.txt` e armazena a resposta do respectivo Modelo responsável pela análise.
 
 ---
 
@@ -150,11 +133,11 @@ Cada arquivo de resultados contém uma lista de objetos no formato:
 * Os modelos clássicos garantem **baseline comparável**.
 * Os LLMs (Mistral, Qwen, Phi‑3) permitem análise mais contextual.
 * A execução via Colab garante **reprodutibilidade e padronização**.
-* Os resultados podem ser comparados quantitativamente (labels e scores) e qualitativamente.
+* Os resultados podem ser comparados qualitativamente.
 
 ---
 
 ## 👨‍💻 Disciplina
 
 **Evolução de Software – 2025/2**
-Atividade prática de análise de sentimentos aplicada a repositórios open‑source.
+Atividade prática de análise de Code Smells num repositório open‑source.
