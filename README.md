@@ -90,9 +90,7 @@ pip install -r requirements.txt
 
 1. Clonar o repositório.
 2. Instalar as dependências.
-3. Garantir que o arquivo de comentários está presente em `src/PRs_comments/`.
-4. Executar o script principal.
-5. Analisar os arquivos `.json` gerados em `src/results/`.
+3. GExecução via Google Colab.
 
 ---
 
@@ -141,7 +139,7 @@ src/results/
 
 ---
 
-## 3. Execução via Google Colab (Recomendado para LLMs)
+## 3. Execução via Google Colab
 
 Para os modelos **Mistral**, **Qwen** e **Phi‑3**, utilize diretamente os notebooks no Google Colab:
 
