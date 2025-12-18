@@ -25,13 +25,13 @@ Os modelos são executados em **notebooks do Google Colab**, evitando dependênc
 
 ### 🔹 Modelos LLM (Execução via Colab)
 
-* **Mistral**
+* [**Mistral**](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/faalkor/Evolucao_Software_2025-2_ChatTTS_atividade2/blob/main/src/models/Mistral.ipynb)
 
-* **Qwen**
+* [**Qwen**](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct)
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/faalkor/Evolucao_Software_2025-2_ChatTTS_atividade2/blob/main/src/models/Qwen.ipynb)
 
-* **Phi‑3**
+* [**Phi‑3**](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/faalkor/Evolucao_Software_2025-2_ChatTTS_atividade2/blob/main/src/models/Phi_3.ipynb)
 
 > 💡 Cada notebook é autocontido e pode ser executado individualmente no Colab.
