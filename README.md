@@ -111,35 +111,7 @@ pip install -r requirements.txt
 
 ---
 
-## 2. Execução dos Modelos (Local)
-
-Os modelos clássicos utilizam automaticamente o arquivo de entrada:
-
-```text
-src/PRs_comments/pr_comments_2noise_ChatTTS_closed_nobots_True.json
-```
-
-### 2.1 Execução unificada
-
-O script `src/main.py` executa os modelos **BERTweet**, **Multilingual** e **Roberta** em sequência:
-
-```bash
-cd src
-python main.py
-# ou python3 main.py
-```
-
-Na primeira execução, os modelos serão baixados do Hugging Face.
-
-Os resultados são gerados em:
-
-```text
-src/results/
-```
-
----
-
-## 3. Execução via Google Colab
+## 2. Execução via Google Colab
 
 Para os modelos **Mistral**, **Qwen** e **Phi‑3**, utilize diretamente os notebooks no Google Colab:
 
@@ -151,7 +123,7 @@ Essa abordagem evita configurações locais e permite uso de GPU.
 
 ---
 
-## 4. Formato dos Arquivos de Saída
+## 3. Formato dos Arquivos de Saída
 
 Cada arquivo de resultados contém uma lista de objetos no formato:
 
