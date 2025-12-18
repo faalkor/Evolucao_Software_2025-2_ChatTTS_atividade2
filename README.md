@@ -9,7 +9,7 @@ A atividade compara diferentes **modelos de linguagem** executados **diretamente
 
 O tutorial oficial da atividade, com instruções passo a passo e critérios de avaliação, está disponível em PDF:
 
-[📖 **Acessar Tutorial em PDF**](https://)
+[📖 **Acessar Tutorial em PDF**](https://docs.google.com/document/d/1p-8Ncw8_xaF_mdi4iRVpKwUrpNi_9oD37J9TUgNvhFI/edit?usp=sharing)
 
 ---
 
