@@ -9,7 +9,7 @@ A atividade compara diferentes **modelos de linguagem**, responsáveis pela iden
 
 O tutorial oficial da atividade, com instruções passo a passo e critérios de avaliação, está disponível em PDF:
 
-[📖 **Acessar Tutorial em PDF**](https://docs.google.com/document/d/1p-8Ncw8_xaF_mdi4iRVpKwUrpNi_9oD37J9TUgNvhFI/edit?usp=sharing)
+[📖 **Acessar Tutorial em PDF**](https://drive.google.com/file/d/1TjBIMM5VpWHvygLiL7pOl4GkeyWukLCf/view?usp=sharing)
 
 ---
 
