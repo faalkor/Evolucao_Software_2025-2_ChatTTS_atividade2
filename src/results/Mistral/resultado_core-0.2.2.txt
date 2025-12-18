@@ -1,0 +1,19 @@
+Code Smell: Long Method
+
+Location: `download_models` method in the `Chat` class
+
+Evidence: The `download_models` method has more than 50 lines of code.
+
+Justificativa técnica: Long methods can make the code harder to read, understand, and maintain. They can also make it more difficult to identify and fix bugs.
+
+Sugestão de refatoração: Split the `download_models` method into smaller methods that each perform a specific task. For example, you could have a method that downloads models from Hugging Face, another method that downloads models from a local directory, and another method that downloads custom models. This would make the code more modular and easier to understand.
+
+Code Smell: Magic Numbers
+
+Location: `download_models` method in the `Chat` class
+
+Evidence: The `download_models` method uses the `force_redownload` parameter, which is a boolean value that determines whether to force a redownload of the models. However, this parameter is not defined anywhere in the code, so it is a magic number.
+
+Justificativa técnica: Magic numbers can make the code harder to understand and maintain. They can also make it more difficult to identify and fix bugs.
+
+Sugestão de refatoração: Define the `force_redownload`

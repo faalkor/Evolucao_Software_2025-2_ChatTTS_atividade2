@@ -1,0 +1,9 @@
+Code Smell: Long Method
+
+Location: The code smell is found in the `download_models` method of the `Chat` class.
+
+Evidence: The method has more than 50 lines of code, which is considered a long method.
+
+Justificativa técnica: Long methods can make the code harder to read, understand, and maintain. They can also make it more difficult to identify and fix bugs.
+
+Sugestão de refatoração: The method can be refactored by breaking it down into smaller, more focused methods. For example, separate methods for downloading models from Hugging Face, local files, and custom paths can be created. This will make the code more modular and easier to read and maintain.

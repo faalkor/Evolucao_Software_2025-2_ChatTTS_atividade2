@@ -1,0 +1,19 @@
+Code Smell: Long Method
+
+Location: `download_models` method in the `Chat` class
+
+Evidence: The `download_models` method has more than 50 lines of code.
+
+Justificativa técnica: Long methods can make the code harder to read, understand, and maintain. They can also make it more difficult to identify and fix bugs.
+
+Sugestão de refatoração: Split the `download_models` method into smaller, more focused methods. For example, you could create separate methods for downloading models from Hugging Face, local files, and custom paths. This would make the code more modular and easier to understand.
+
+Code Smell: Magic Numbers
+
+Location: The `download_all_assets` function in the `utils` module
+
+Evidence: The `download_all_assets` function uses the `os.getcwd()` method to get the current working directory, but this method returns the path to the current working directory relative to the Python interpreter. This means that the path returned by `os.getcwd()` may not be the same as the path returned by `Path.cwd()`.
+
+Justificativa técnica: Magic numbers can make the code harder to understand and maintain. They can also make it more difficult to identify and fix bugs.
+
+Sugestão de refatoração:
